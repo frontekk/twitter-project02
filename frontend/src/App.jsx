@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopNavbar from "./components/TopNavbar";
 import SideNavbar from "./components/SideNavbar";
 import BottomNavbar from "./components/BottomNavbar";
@@ -10,6 +10,14 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
   const [closingAnimation, setClosingAnimation] = useState(false);
+
+  useEffect(() => {
+    if (sideMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [sideMenuOpen]);
 
   //SIDE NAVBAR
   const handleOpenSideMenu = () => {

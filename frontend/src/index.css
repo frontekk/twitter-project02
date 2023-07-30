@@ -52,3 +52,7 @@
     @apply peer-checked:max-h-max max-h-0 basis-full peer-checked:p-3 overflow-hidden transition-all select-text;
   }
 }
+/* PREVENT SCROLLING WHEN SIDEBAR IS SHOWING */
+.no-scroll {
+  overflow: hidden;
+}
