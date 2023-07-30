@@ -11,13 +11,10 @@ import {
   CiSun,
 } from "react-icons/ci";
 import userProfileImage from "../assets/img/userProfile.jpeg";
-import useLockBodyScroll from "./useLockBodyScroll";
 
 const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
   const [closingAnimation, setClosingAnimation] = useState(false);
   const [isVisible, setIsVisible] = useState(isOpen);
-
-  useLockBodyScroll(isOpen);
 
   useEffect(() => {
     if (isOpen) {
