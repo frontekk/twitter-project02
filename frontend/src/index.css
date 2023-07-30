@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-slide-out {
+  animation: slideOut 0.3s ease-out;
+}
+
+/* fade animation with opacity and black background and stay with the opacity 1*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.3s ease forwards;
+}
+/* DROP DOWN SUB MENU */
+@layer components {
+  .item {
+    @apply w-full font-semibold flex flex-wrap select-none dark:text-white;
+  }
+  .content {
+    @apply peer-checked:max-h-max max-h-0 basis-full peer-checked:p-3 overflow-hidden transition-all select-text;
+  }
+}
