@@ -16,10 +16,10 @@ const PostContent = () => {
         <div className="flex flex-row justify-between items-center space-x-2">
           <div className="flex items-center space-x-2">
             <h1 className="font-bold text-black dark:text-white">UserName</h1>
-            <p className="text-gray-600">@username</p>
-            <p className="text-gray-600">· 1d</p>
+            <p className="text-gray-400">@username</p>
+            <p className="text-gray-400">· 1d</p>
           </div>
-          <BsThreeDotsVertical className="text-gray-600" />
+          <BsThreeDotsVertical className="text-gray-400" />
         </div>
         {/* texto content */}
         <div>

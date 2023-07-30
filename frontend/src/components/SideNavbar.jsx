@@ -11,6 +11,7 @@ import {
   CiSun,
 } from "react-icons/ci";
 import userProfileImage from "../assets/img/userProfile.jpeg";
+import DropDownMenu from "./DropDownMenu";
 
 const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
   const [closingAnimation, setClosingAnimation] = useState(false);
@@ -28,6 +29,9 @@ const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
     }
   }, [isOpen, closingAnimation, onClose]);
 
+  const dropdownOptions1 = ["Option 1", "Option 2", "Option 3"];
+  const dropdownOptions2 = ["Option 1", "Option 2", "Option 3"];
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   return (
     <>
       {isVisible && (
@@ -111,79 +115,21 @@ const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
             <div className="w-fill border-t border-gray-500 mt-12"></div>
             {/* options */}
             <div>
-              {/* <div className="flex flex-row justify-between mt-5 cursor-pointer">
-                <p className="font-semibold text-gray-700 dark:text-white">
-                  Professional Tools
-                </p>
-                <CiSquareChevDown className="text-2xl stroke-1 text-gray-700 dark:text-white" />
-              </div> */}
-              <div className="mt-3 cursor-pointer">
-                <div className="item">
-                  <input
-                    type="checkbox"
-                    id="faq4"
-                    className="peer appearance-none"
-                  />
-                  <label
-                    htmlFor="faq4"
-                    className="cursor-pointer grow justify-between flex flex-row"
-                  >
-                    <p>Professional Tools</p>
-                    <CiSquareChevDown className="text-2xl stroke-1 text-gray-700 dark:text-white" />
-                  </label>
-                  <div className="content">
-                    <p className="border-b bottom-1 border-gray-300">
-                      Option 1
-                    </p>
-                  </div>
-                  <div className="content">
-                    <p className="border-b bottom-1 border-gray-300">
-                      Option 2
-                    </p>
-                  </div>
-                  <div className="content">
-                    <p className="border-b bottom-1 border-gray-300">
-                      Option 3
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* <div className="flex flex-row justify-between mt-3 cursor-pointer">
-                <p className="font-semibold text-gray-700 dark:text-white">
-                  Settings & Support
-                </p>
-                <CiSquareChevDown className="text-2xl stroke-1 text-gray-700 dark:text-white" />
-              </div> */}
-              <div className="mt-3 cursor-pointer">
-                <div className="item">
-                  <input
-                    type="checkbox"
-                    id="faq5"
-                    className="peer appearance-none"
-                  />
-                  <label
-                    htmlFor="faq5"
-                    className=" cursor-pointer grow justify-between flex flex-row"
-                  >
-                    <p>Settings & Support</p>
-                    <CiSquareChevDown className="text-2xl stroke-1 text-gray-700 dark:text-white" />
-                  </label>
-                  <div className="content ">
-                    <p className="border-b bottom-1 border-gray-300">
-                      Option 1
-                    </p>
-                  </div>
-                  <div className="content">
-                    <p className="border-b bottom-1 border-gray-300">
-                      Option 2
-                    </p>
-                  </div>
-                  <div className="content">
-                    <p className="border-b bottom-1 border-gray-300">
-                      Option 3
-                    </p>
-                  </div>
-                </div>
+              <div className="mt-3 space-y-2">
+                <DropDownMenu
+                  title="Professional Tools"
+                  options={dropdownOptions1}
+                  index={1}
+                  openDropdownIndex={openDropdownIndex}
+                  setOpenDropdownIndex={setOpenDropdownIndex}
+                />
+                <DropDownMenu
+                  title="Setting & Support"
+                  options={dropdownOptions2}
+                  index={2}
+                  openDropdownIndex={openDropdownIndex}
+                  setOpenDropdownIndex={setOpenDropdownIndex}
+                />
               </div>
             </div>
             {/* dark mode */}

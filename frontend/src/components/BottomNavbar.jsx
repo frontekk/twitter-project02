@@ -5,7 +5,7 @@ const BottomNavbar = () => {
   return (
     <>
       <div className="fixed bottom-0 bg-white dark:bg-gray-700 w-full h-14 md:hidden">
-        <div className="border border-b-1 border-red-400 dark:hidden"></div>
+        <div className="border border-b-1 border-red-400 dark:border-slate-600"></div>
         <div className="flex items-center justify-between px-3 h-full">
           <div className="">
             <CiHome className="stroke-1 text-4xl text-red-500 cursor-pointer" />
