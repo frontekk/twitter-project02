@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   CiMenuKebab,
   CiUser,
@@ -11,36 +11,23 @@ import {
   CiSun,
 } from "react-icons/ci";
 import userProfileImage from "../assets/img/userProfile.jpeg";
+import useLockBodyScroll from "./useLockBodyScroll";
 
 const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
   const [closingAnimation, setClosingAnimation] = useState(false);
   const [isVisible, setIsVisible] = useState(isOpen);
 
-  const dropdownRef = useRef(null);
-
-  // Function to handle the scroll events within the SideNavbar
-  const handleScroll = (e) => {
-    if (
-      isOpen &&
-      dropdownRef.current &&
-      dropdownRef.current.contains(e.target)
-    ) {
-      // Prevent propagation of the scroll event to the main screen
-      e.stopPropagation();
-    }
-  };
+  useLockBodyScroll(isOpen);
 
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true); // Show the SideNavbar when it is open or when the closing animation starts
       setClosingAnimation(false); // Reset closingAnimation when opening
-      document.addEventListener("scroll", handleScroll, { passive: false });
     } else if (!closingAnimation) {
       setClosingAnimation(true); // Start the closing animation
       setTimeout(() => {
         setIsVisible(false); // Hide the SideNavbar after the closing animation is complete
       }, 300); // Adjust the delay to match the animation duration
-      document.removeEventListener("scroll", handleScroll);
     }
   }, [isOpen, closingAnimation, onClose]);
 
@@ -170,7 +157,7 @@ const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
                 </p>
                 <CiSquareChevDown className="text-2xl stroke-1 text-gray-700 dark:text-white" />
               </div> */}
-              <div className="mt-3 cursor-pointer" ref={dropdownRef}>
+              <div className="mt-3 cursor-pointer">
                 <div className="item">
                   <input
                     type="checkbox"
