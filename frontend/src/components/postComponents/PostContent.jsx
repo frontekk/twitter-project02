@@ -40,23 +40,23 @@ const PostContent = () => {
         {/* icons content */}
         <div className="flex flex-row justify-between mt-2">
           <div className="flex flex-row items-center space-x-1">
-            <FaRegComment className="text-gray-700" />
-            <p className="text-gray-700">2,523</p>
+            <FaRegComment className="text-gray-700 dark:text-gray-300" />
+            <p className="text-gray-700 dark:text-gray-300">2,523</p>
           </div>
           <div className="flex flex-row items-center space-x-1">
-            <FaRetweet className="text-gray-700" />
-            <p className="text-gray-700">4,239</p>
+            <FaRetweet className="text-gray-700 dark:text-gray-300" />
+            <p className="text-gray-700 dark:text-gray-300">4,239</p>
           </div>
           <div className="flex flex-row items-center space-x-1">
-            <FaRegHeart className="text-gray-700" />
-            <p className="text-gray-700">73,6K</p>
+            <FaRegHeart className="text-gray-700 dark:text-gray-300" />
+            <p className="text-gray-700 dark:text-gray-300">73,6K</p>
           </div>
           <div className="flex flex-row items-center space-x-1">
-            <FaEye className="text-gray-700" />
-            <p className="text-gray-700">1.9M</p>
+            <FaEye className="text-gray-700 dark:text-gray-300" />
+            <p className="text-gray-700 dark:text-gray-300">1.9M</p>
           </div>
           <div className="flex flex-row items-center space-x-1">
-            <FaShareNodes className="text-gray-700" />
+            <FaShareNodes className="text-gray-700 dark:text-gray-300" />
           </div>
         </div>
       </div>

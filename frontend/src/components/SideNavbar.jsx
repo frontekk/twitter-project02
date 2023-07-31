@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   CiMenuKebab,
   CiUser,
@@ -43,13 +44,13 @@ const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
           <div className=" p-4">
             {/* TOP USER AND SETTING */}
             <div className="flex flex-row justify-between items-center">
-              <div>
+              <Link to={"/profile"}>
                 <img
                   src={userProfileImage}
                   alt="User Profile"
                   className="rounded-full w-11 h-11"
                 />
-              </div>
+              </Link>
               <div className="h-8 w-8 flex items-center rounded-full border-2 border-black cursor-pointer dark:border-white">
                 <CiMenuKebab className="text-2xl mx-auto stroke-1 dark:text-white" />
               </div>
