@@ -52,11 +52,11 @@ const Profile = () => {
             </div>
             {/* JOIN DETAILS */}
             <div className="mt-6 flex flex-row space-x-7">
-              <div className="flex space-x-1 items-center text-gray-500 dark:text-gray-300">
+              <div className="flex space-x-1 items-center text-sm text-gray-500 dark:text-gray-300">
                 <PiCakeThin />
                 <span>Born 22 February 1992</span>
               </div>
-              <div className="flex space-x-1 items-center text-gray-500 dark:text-gray-300">
+              <div className="flex space-x-1 items-center text-sm text-gray-500 dark:text-gray-300">
                 <PiCalendarCheckThin />
                 <span>Joined July 2001</span>
               </div>
@@ -64,14 +64,14 @@ const Profile = () => {
             {/* FOLLOWS */}
             <div className="mt-2 flex flex-row space-x-3">
               <div className="flex space-x-1">
-                <span className="font-bold dark:text-white">101</span>
-                <span className="text-gray-500 dark:text-gray-300">
+                <span className="font-bold text-sm dark:text-white">101</span>
+                <span className="text-gray-500 text-sm dark:text-gray-300">
                   Following
                 </span>
               </div>
               <div className="flex space-x-1">
-                <span className="font-bold dark:text-white">50</span>
-                <span className="text-gray-500 dark:text-gray-300">
+                <span className="font-bold text-sm dark:text-white">50</span>
+                <span className="text-gray-500 text-sm dark:text-gray-300">
                   Followers
                 </span>
               </div>
