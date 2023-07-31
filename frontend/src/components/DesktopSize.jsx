@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorMessage from "../assets/img/ErrorMessage.svg";
+import ErrorMessage from "../assets/img/errorMessage.svg";
 const DesktopSize = () => {
   return (
     <>
