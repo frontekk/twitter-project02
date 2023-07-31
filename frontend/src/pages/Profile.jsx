@@ -91,9 +91,9 @@ const Profile = () => {
           <span className="cursor-pointer px-4 py-2 rounded-full font-bold dark:text-gray-400">
             Media
           </span>
-          <span className="cursor-pointer px-4 py-2 rounded-full font-bold dark:text-gray-400">
+          {/* <span className="cursor-pointer px-4 py-2 rounded-full font-bold dark:text-gray-400">
             Like
-          </span>
+          </span> */}
         </div>
         <div className="border-b-2 mt-1"></div>
         <PostCard />
