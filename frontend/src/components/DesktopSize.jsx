@@ -11,7 +11,7 @@ const DesktopSize = () => {
         </div> */}
         <div className="bg-blue-500 flex flex-col justify-center items-center h-screen">
           <img src={ErrorMessage} className="h-1/2 w-1/2" />
-          <p className="text-4xl text-white mt-2">
+          <p className="text-4xl text-white mt-3">
             It seems like you’re on a Desktop device.
           </p>
           <p className="text-2xl text-blue-200">
