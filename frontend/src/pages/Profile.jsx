@@ -14,7 +14,7 @@ import PostCard from "../components/PostCard";
 const Profile = () => {
   return (
     <>
-      <div className="flex flex-col bg-white dark:bg-gray-700">
+      <div className="flex flex-col bg-white dark:bg-gray-700 md:hidden">
         {/* BANNER And Buttons */}
         <div className="h-36 p-4 w-auto bg-blue-500 flex flex-row justify-between">
           <div className="">
@@ -96,8 +96,6 @@ const Profile = () => {
           </span> */}
         </div>
         <div className="border-b-2 mt-1"></div>
-        <PostCard />
-        <PostCard />
         <PostCard />
       </div>
     </>
