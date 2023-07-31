@@ -29,7 +29,7 @@ const Profile = () => {
             </div>
           </div>
           {/* Profile Picture & button edit*/}
-          <div className="flex flex-row justify-between px-4">
+          <div className="flex flex-row justify-between px-4 h-8">
             <div>
               <img
                 src={ProfileImg}
