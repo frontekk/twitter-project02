@@ -81,12 +81,15 @@ const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
             <div className="w-fill border-t border-gray-500 mt-5"></div>
             {/* OPTIONS */}
             <div className="mt-12">
-              <div className="flex flex-row space-x-4 cursor-pointer">
+              <Link
+                className="flex flex-row space-x-4 cursor-pointer"
+                to={"/profile"}
+              >
                 <CiUser className="text-2xl stroke-1 text-gray-700 dark:text-white" />
                 <p className="font-semibold text-gray-700 dark:text-white">
                   Profile
                 </p>
-              </div>
+              </Link>
               <div className="flex flex-row space-x-4 mt-3 cursor-pointer">
                 <CiCircleCheck className="text-2xl stroke-1 text-gray-700 dark:text-white" />
                 <p className="font-semibold text-gray-700 dark:text-white">
