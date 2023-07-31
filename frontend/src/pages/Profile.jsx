@@ -54,7 +54,7 @@ const Profile = () => {
             <div className="mt-6 flex flex-row space-x-7">
               <div className="flex space-x-1 items-center text-gray-500 dark:text-gray-300">
                 <PiCakeThin />
-                <span>Born 2 February 1992</span>
+                <span>Born 22 February 1992</span>
               </div>
               <div className="flex space-x-1 items-center text-gray-500 dark:text-gray-300">
                 <PiCalendarCheckThin />
