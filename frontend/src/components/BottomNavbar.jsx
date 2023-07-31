@@ -42,7 +42,7 @@ import { CiHome, CiSearch, CiBellOn, CiMail, CiAvocado } from "react-icons/ci";
 const BottomNavbar = ({ scrollDirection }) => {
   const navbarClassName = scrollDirection === "down" ? "slide-out" : "slide-in";
   return (
-    <div className={`bottom-navbar ${navbarClassName}`}>
+    <div className={`bottom-navbar ${navbarClassName} md:hidden`}>
       <div className="border border-b-1 border-red-400 dark:border-slate-600"></div>
       <div className="flex items-center justify-between px-3 h-full">
         <div className="">
