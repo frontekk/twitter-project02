@@ -39,7 +39,7 @@ const SideNavbar = ({ isOpen, onClose, darkMode, isDarkMode }) => {
         <div
           className={`${
             isOpen ? "animate-slide-in" : "animate-slide-out"
-          } absolute left-0 top-0 h-screen w-4/5 bg-white dark:bg-gray-700`}
+          } absolute left-0 top-0 h-screen w-4/5 bg-white dark:bg-gray-700 z-30`}
         >
           <div className=" p-4">
             {/* TOP USER AND SETTING */}

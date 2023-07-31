@@ -38,11 +38,28 @@ function Home() {
     const element = document.querySelector("html").className;
     document.querySelector("html").className = element === "dark" ? "" : "dark";
   };
+
+  // behave bottomnavbar
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]); // END behave bottomnavbar
   return (
     <>
       <div className={`App `}>
         <TopNavbar openSideMenu={handleOpenSideMenu} />
-        <BottomNavbar isDarkMode={isDarkMode} />
+        <BottomNavbar scrollDirection={scrollDirection} />
         <div
           className={`${
             sideMenuOpen
